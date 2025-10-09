@@ -45,7 +45,7 @@ Requests from client devices must be let through the firewall. The port of the v
 
 ### 4. Remote access
 
-1. Install `tailscale`: Follow the instructions on [Tailscale website](https://tailscale.com/download/linux/)
+1. Install `tailscale`: Follow the instructions on [Tailscale website](https://tailscale.com/download/linux/). Currently, entering the following command works: `curl -fsSL https://tailscale.com/install.sh | sh`
 2. Register the device on your tailscale net: `sudo tailscale up`
 3. Copy the link provided on a web browser (phone, computer, ...) and authenticate the device.
 4. From the same web page, disable the key expiry
