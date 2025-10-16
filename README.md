@@ -28,12 +28,16 @@ After booting the Rapsberry Pi, input the following commands in a terminal:
 1. Install motion: `sudo apt-get install motion`
 2. Save a backup of the original configuration: `sudo cp /etc/motion/motion.conf /etc/motion/motion.conf.bckp`
 3. Configure motion: `sudo nano /etc/motion/motion.conf`
-
-   3.1. `text_left RD Webcam 1`
-
-   3.2. `movie_output off`
-
-   3.3. `stream_localhost off`
+   1. Display camera name on image: `text_left CAM 1`
+   2. Disable movie recording on movement: `movie_output off`
+   3. Disable picture recording on movement: `picture_output off`
+   4. Enable stream to other devices: `stream_localhost off`
+   6. Set image size: `width 1920`
+   7. Set image size: `height 1080`
+   5. Scale text overlay: `text_scale 3`
+   8. Set image quality to the maximum: `stream_quality 100`
+   9. Limit image refresh rate to save bandwidth: `stream_maxrate 1`
+   10. Default values are used for other parameters 
 
 ### 3. Firewall
 Requests from client devices must be let through the firewall. The port of the video stream must be opened. To do that, Uncomplicated Firewall (`ufw`) is the best tool.
